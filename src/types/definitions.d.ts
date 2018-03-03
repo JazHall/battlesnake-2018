@@ -1,5 +1,6 @@
-declare module battlesnake.Definitions {
-    import {Request, Response} from "express";
+import {Request, Response} from "express";
+
+declare module battlesnake.Definitions {    
 
     // --- Request Interfaces ---
 
@@ -90,3 +91,4 @@ declare module battlesnake.Definitions {
     export type State = "head" | "body" | "food" | "empty"
     export type SnakeType = "self" | "enemy"
 }
+export = battlesnake;
