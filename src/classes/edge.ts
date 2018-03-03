@@ -2,13 +2,13 @@
 *   Edge {
 *        direction:     'up' | 'left' | 'down' | 'right',
 *        weight:        Integer,
-*        source:        Point | null,
-*        destination:   Point | null
+*        origin:        Vertex | null,
+*        destination:   Vertex | null
 *   }
 */
 
 import Move = battlesnake.Definitions.Move;
-import Point = battlesnake.Definitions.Point;
+import Vertex = battlesnake.Definitions.Vertex;
 import Board = battlesnake.Classes.Board;
 
 module battlesnake.Classes {
@@ -16,16 +16,16 @@ module battlesnake.Classes {
 
 		direction: Move = "up";
 		weight: number = 100;
-		source: Point;
-		destination: Point;
+		origin: Vertex;
+		destination: Vertex;
 
-		constructor(direction: Move, source: Point, destination?: Point) {
+		constructor(direction: Move, origin: Vertex, destination?: Vertex) {
 			//Initialize properties, if supplied
 			if (direction) {
 				this.direction = direction;
 			}
-			if (source) {
-				this.source = source;
+			if (origin) {
+				this.origin = origin;
 			}
 			if (destination) {
 				this.destination = destination;
